@@ -1,4 +1,4 @@
-const GOOGLE_CLOUD_API_KEY = '';
+const GOOGLE_CLOUD_API_KEY = 'AIzaSyAb9NOqgSIce6arUzTP_ySgp5JOcxmo1N0';
 
 const getBusyIntervals = async (calendarId, startTime, endTime) => {
   const url = `https://www.googleapis.com/calendar/v3/freeBusy?key=${GOOGLE_CLOUD_API_KEY}`;
@@ -38,3 +38,12 @@ const getBusyIntervals = async (calendarId, startTime, endTime) => {
     ${error}`);
   }
 };
+
+const CALENDAR_ID = 'fa6ggft0hja55o11f3gec5oaq0@group.calendar.google.com';
+const timeMin = new Date('2023-04-03');
+const timeMax = new Date('2023-04-07');
+
+(async () => {
+  const intervals = await getBusyIntervals(CALENDAR_ID, timeMin, timeMax);
+  console.log('intervals:', intervals);
+})();
