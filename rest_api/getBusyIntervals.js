@@ -1,4 +1,4 @@
-const GOOGLE_CLOUD_API_KEY = 'AIzaSyAb9NOqgSIce6arUzTP_ySgp5JOcxmo1N0';
+const GOOGLE_CLOUD_API_KEY = 'YOUR_API_KEY';
 
 const getBusyIntervals = async (calendarId, startTime, endTime) => {
   const url = `https://www.googleapis.com/calendar/v3/freeBusy?key=${GOOGLE_CLOUD_API_KEY}`;
